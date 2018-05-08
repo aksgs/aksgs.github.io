@@ -60,6 +60,8 @@
           $body.appendChild($wrapper);
           $logo = document.createElement('img');
           $logo.src = "images/logo.png";
+          $logo.setAttribute("ondragstart", "return false;");
+          $logo.setAttribute("oncontextmenu","return false;");
           $body.appendChild($logo);
 
         for (k in settings.images) {
@@ -68,7 +70,6 @@
             $bg = document.createElement('div');
               $bg.style.backgroundImage = 'url("' + k + '")';
               $bg.style.backgroundPosition = settings.images[k];
-
 
               $wrapper.appendChild($bg);
 
